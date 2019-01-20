@@ -1,3 +1,5 @@
+// 풀이 //
+
 package hijava.practice;
 
 public class for_try5 {
@@ -5,22 +7,22 @@ public class for_try5 {
 	public static void main(String[] args) {
 		
 		int sum = 0;
-	
-		for (int i = 2; i <= 100; i++) {
-			
-			for (int j = 2; j <= i; j++) {
-				
-				if ( i % j == 0 ) {
-					break;
-				} 
-				
-				if ( j == i-1 || i == 2){
-					sum += i ;
+		
+		for (int num = 2; num <= 100; num++) {
+			boolean isPrime = true;
+		
+			for( int j = 2; j < num; j++) {
+				if(num % j == 0) {
+					isPrime = false;
+					break;	
 				}
-			}
 			
+			}
+			if (isPrime ) {
+				sum += num;	
+			}
 		}
-
+		
 		System.out.println(sum);
 	}
 
