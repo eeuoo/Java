@@ -4,9 +4,13 @@ public class for_try4 {
 
 	public static void main(String[] args) {
 		
-		int sum = 2;
+		int sum = 0;
 		
-		for (int i = 2; i <= 100; i++) {
+		for (int i = 1; i <= 100; i++) {
+			
+			if (i == 2) {
+				sum += i;
+			}
 			
 			for (int j = 2; j < i; j++) {
 				
