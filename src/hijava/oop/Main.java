@@ -7,15 +7,100 @@ import hijava.practice.Man;
 public class Main {
 
 	public static void main(String[] args) {
+		
+		total();
+		
+//		testimpl();
+		
+//		calc();
+		
+//		softwares();
+		
+//		netsports();
+		
+//		animal_bark();
+		
+//		abstsuper();	
+		
 //		arrlist();
-
+ 
 //		mom_daughter();
 
-		helloWorld();
+//		helloWorld();
 		
 		
 	}
 
+
+	private static void total() {
+		int[] arr = new int[] { 1, 2, 5, 9};
+		
+		SubTotal st = new SubTotal();
+		TotalImpl ti = new TotalImpl();
+		
+		System.out.println("Total=" + st.sum(arr));
+		System.out.println("Total=" + ti.sum(arr));
+	}
+
+
+	private static void testimpl() {
+		TestInterface in = new TestImpl();
+		TestImpl ti = new TestImpl();
+		
+		in.print("aaa");
+		TestInterface.out(100);  //in.out은 부를 수 없고 TestInterface로 불러야한다.
+		ti.print("bbb");
+		TestInterface.out(100);
+		
+		Dog.eat("meat");
+	}
+
+
+	private static void calc() {
+		Calculator calc = new CalcImpl();
+		System.out.println(calc.add(1, 3));
+	}
+
+
+	private static void softwares() {
+		SoftWare website = new WebSite();
+		SoftWare mobileapp = new MobileApp();
+		
+		website.work();
+		System.out.println("---------");
+		mobileapp.work();
+		
+	}
+
+
+	private static void netsports() {
+		NetSports pp = new PingPong();
+		NetSports tn = new Tennis();
+		
+		pp.play();
+		System.out.println("---------");
+		tn.play();
+		
+	}
+
+	private static void animal_bark() {
+		Animal dog = new Dog();
+		Animal cat = new Cat();
+		
+		cat.bark();
+		dog.bark();
+		
+	}
+
+	private static void abstsuper() {
+		AbstSuper sp = new AbstChild1();
+		int x = 5;
+		int y = 10;
+		
+		System.out.println("min=" + sp.min(x,y) + " max=" + sp.max(x, y));
+		
+	}
+	
 	private static void helloWorld() {
 		Man lee = new Korean("현주");
 		lee.sayHello();
