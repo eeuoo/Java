@@ -2,5 +2,5 @@ package hijava.oop;
 
 public interface Sub {
 	
-	public void sub(int i, int j);
+	public int sub(int i, int j);
 }

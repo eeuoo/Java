@@ -8,7 +8,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		total();
+		oper();
+		
+//		total();
 		
 //		testimpl();
 		
@@ -27,6 +29,15 @@ public class Main {
 //		mom_daughter();
 
 //		helloWorld();
+		
+		
+	}
+
+
+	private static void oper() {
+		CalcOper co = new CalcOper();
+		
+		System.out.println(co.add(2, 1));
 		
 		
 	}

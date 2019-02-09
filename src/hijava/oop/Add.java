@@ -2,5 +2,5 @@ package hijava.oop;
 
 public interface Add {
 
-	public void add(int i, int j);
+	public int add(int i, int j);
 }
