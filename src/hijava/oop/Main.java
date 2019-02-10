@@ -37,7 +37,7 @@ public class Main {
 	private static void oper() {
 		CalcOper co = new CalcOper();
 		
-		System.out.println(co.add(2, 1));
+		System.out.println(co.div(15, 2));
 		
 		
 	}
