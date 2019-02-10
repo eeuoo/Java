@@ -46,7 +46,6 @@ public class Main {
 			String res = inputScan(scanner, "계속하십니까??(계속:Enter, 그만:q) >> ");
 			
 			if ("q".equalsIgnoreCase(res)) {
-				scanner.close();
 				break;
 			}
 			
@@ -65,6 +64,8 @@ public class Main {
 			}
 
 		}
+		
+		scanner.close();
 	}
 
 	private static int inputScanNum(Scanner scanner, String msg) {
