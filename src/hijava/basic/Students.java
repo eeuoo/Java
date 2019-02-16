@@ -1,8 +1,5 @@
 package hijava.basic;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 
 public class Students implements Cloneable {
 	private int id;
@@ -87,26 +84,14 @@ public class Students implements Cloneable {
 		Integer obj = new Integer(s.id);
 		Integer obj2 = new Integer(921234);
 
-//		System.out.println(s.name.hashCode() + "::" + ss.hashCode());
-//		System.out.println(obj.hashCode() + "=" + obj2.hashCode());
-//		System.out.println(System.identityHashCode(obj2));
-//
-//		System.out.println("kim1 equals lee = " + lee.equals(kim1));
-//		System.out.println("kim1 equals kim2 = " + kim2.equals(kim1));
-//		
-//		System.out.println(dong);
+		System.out.println(s.name.hashCode() + "::" + ss.hashCode());
+		System.out.println(obj.hashCode() + "=" + obj2.hashCode());
+		System.out.println(System.identityHashCode(obj2));
+
+		System.out.println("kim1 equals lee = " + lee.equals(kim1));
+		System.out.println("kim1 equals kim2 = " + kim2.equals(kim1));
 		
-		String inputstr = "hijava.basic.Students";
-		Class cls = class.forName(oinputstr);
-		package pkg = cls.getPackage();
-		System.out.println("pkg=" + pkg);
-		
-		for (Constructor c : cls.getConstructors())
-			System.out.println("constructor=" + c);
-		for (Field f : cls.getField())
-			System.out.println("field=" + f);
-		for (Method m : cls.getMethods())
-			System.out.println(m.getName());
+		System.out.println(dong);
 		
 		
 	}
