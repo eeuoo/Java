@@ -1,6 +1,10 @@
 package hijava.basic;
 
-public class Students {
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+
+public class Students implements Cloneable {
 	private int id;
 	private String name;
 
@@ -24,12 +28,12 @@ public class Students {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 	@Override
 	public String toString() {
-		return this.name + "(" + this.id + ")" ;
+		return this.name + "(" + this.id + ")";
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -39,22 +43,71 @@ public class Students {
 		if (getClass() != obj.getClass())
 			return false;
 		Students other = (Students) obj;
+		if (id != other.id) {
+			return false;
+		}
 		if (name == null) {
 			if (other.name != null)
 				return false;
 		} else if (!name.equals(other.name))
 			return false;
+
 		return true;
+
+//		Students other = (Students) obj;
+//		return id == other.id && other.name != null && name == other.name;
+
 	}
 
-	public static void main(String[] args) {
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+		Students cloneo = (Students) super.clone();
+		cloneo.name = cloneo.name + "복제본";
+		return cloneo;
+	}
+	
+
+	public static void main(String[] args) throws CloneNotSupportedException {
+		StringBuilder sb = new StringBuilder();
+		sb.append("aaaa");
+		System.out.println("sb1=" + sb.toString());
+		sb.setLength(0);
+		System.out.println("sb2=" + sb.toString());
+		
+		
 		Students lee = new Students(12, "hyunjoo");
-		Students kim = new Students(11, "yuna");
-		Students park = new Students(13, "yuna");
+		Students kim1 = new Students(11, "yuna");
+		Students kim2 = new Students(11, "yuna");
+		Students dong = (Students) lee.clone();
+
+		System.out.println(lee.getClass() + "::::" +  lee.getClass().getName() );
 		
-		System.out.println(lee);
+		Students s = new Students(921234, "홍길동");
+		String ss = new String("홍길동");
+		Integer obj = new Integer(s.id);
+		Integer obj2 = new Integer(921234);
+
+//		System.out.println(s.name.hashCode() + "::" + ss.hashCode());
+//		System.out.println(obj.hashCode() + "=" + obj2.hashCode());
+//		System.out.println(System.identityHashCode(obj2));
+//
+//		System.out.println("kim1 equals lee = " + lee.equals(kim1));
+//		System.out.println("kim1 equals kim2 = " + kim2.equals(kim1));
+//		
+//		System.out.println(dong);
 		
-		System.out.println("kim equals lee = " + lee.equals(kim));
-		System.out.println("kim equals part = " + park.equals(kim));
+		String inputstr = "hijava.basic.Students";
+		Class cls = class.forName(oinputstr);
+		package pkg = cls.getPackage();
+		System.out.println("pkg=" + pkg);
+		
+		for (Constructor c : cls.getConstructors())
+			System.out.println("constructor=" + c);
+		for (Field f : cls.getField())
+			System.out.println("field=" + f);
+		for (Method m : cls.getMethods())
+			System.out.println(m.getName());
+		
+		
 	}
 }
