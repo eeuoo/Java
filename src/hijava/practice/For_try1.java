@@ -1,6 +1,6 @@
 package hijava.practice;
 
-public class for_try1 {
+public class For_try1 {
 
 	public static void main(String[] args) {
 //		for (int i = 1; i <= 7; i++) {

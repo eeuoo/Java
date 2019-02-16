@@ -15,8 +15,8 @@ public class Man {
 
 	private int money;
 	private String name;
-	public static final int COFFEE = 3000;
-	public final static int DONUT = 2500;
+	public static final int COFFEE = 3000; // 변하지 못하게 고정
+	public final static int DONUT = 2500;  // 변하지 못하게 고정
 	
 	
 	public Man(String name) {
@@ -49,13 +49,17 @@ public class Man {
 		this.submoney(DONUT, count);
 	}
 
-	public void submoney(int price, int count) {
+	private void submoney(int price, int count) {
 		this.money -= price * count;
-	}
+	} // 밖에서는 부르지 못하게 private로 설정. 
 	
 	@Override
 	public String toString() {
 		return "Man [money=" + money + ", name=" + name + "]";
+	}
+	
+	public void sayHello() {
+		System.out.println( "안녕하세요. 저는 " + getName() + "입니다." );
 	}
 
 }

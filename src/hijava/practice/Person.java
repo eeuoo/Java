@@ -17,10 +17,10 @@ public class Person {
 		age = page;
 	}
 	
-	@Override
-	public String toString() {
-		return "Person [name=" + name + ", height=" + height + ", age=" + age + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Person [name=" + name + ", height=" + height + ", age=" + age + "]";
+//	}
 	
 	public static void main(String[] args) {
 		Person Lee = new Person("lee", 170F , 33);

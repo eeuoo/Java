@@ -2,7 +2,7 @@
 
 package hijava.practice;
 
-public class for_try5 {
+public class For_try5 {
 
 	public static void main(String[] args) {
 		

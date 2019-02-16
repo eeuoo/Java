@@ -1,6 +1,6 @@
 package hijava.practice;
 
-public class for_try2 {
+public class For_try2 {
 
 	public static void main(String[] args) {
 		

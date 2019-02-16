@@ -1,6 +1,6 @@
 package hijava.practice;
 
-public class while_try2 {
+public class While_try2 {
 
 	public static void main(String[] args) {
 		int i = 0;

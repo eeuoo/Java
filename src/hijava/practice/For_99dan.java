@@ -1,6 +1,6 @@
 package hijava.practice;
 
-public class for_99dan {
+public class For_99dan {
 
 	public static void main(String[] args) {
 		for (int i = 1; i <= 9; i++) {
