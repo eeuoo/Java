@@ -29,4 +29,6 @@ public class Person<T> {
 		System.out.println("stu=" + studentperson.getName());
 		
 	}
+	
+	
 }
