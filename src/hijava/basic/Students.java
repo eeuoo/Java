@@ -4,6 +4,10 @@ package hijava.basic;
 public class Students implements Cloneable {
 	private int id;
 	private String name;
+	
+	public Students() {
+		this.name = "Guest";
+	}
 
 	public Students(int id, String name) {
 		this.id = id;
