@@ -1,7 +1,7 @@
 package hijava.basic;
 
 
-public class Students implements Cloneable {
+public class Students implements Cloneable, Comparable<Students> {
 	private int id;
 	private String name;
 	
@@ -67,7 +67,19 @@ public class Students implements Cloneable {
 		return cloneo;
 	}
 	
+	@Override
+	public int hashCode() {
+		return this.id;
+	}
+	
+	@Override
+	public int compareTo(Students s) {
+		System.out.println("comp= " + this.id + "-" + s.id);
+		return (this.id - s.id);
+	}
+	
 
+	
 	public static void main(String[] args) throws CloneNotSupportedException {
 		StringBuilder sb = new StringBuilder();
 		sb.append("aaaa");
