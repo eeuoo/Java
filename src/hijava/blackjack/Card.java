@@ -8,15 +8,27 @@ public class Card {
 	
 	public static void main(String[] args ) {
 	
-	List<String> cardlist = new ArrayList<>();
+	Card card = new Card();
+	System.out.println(card.cardlist);
 	
-	makeCard(cardlist, "heart");
-	makeCard(cardlist, "diamond");
-	makeCard(cardlist, "spade");
-	makeCard(cardlist, "clover");
-	
-	System.out.println(cardlist);
-	
+	}
+
+	private List<String> cardlist;
+
+	public Card() {
+		
+		List<String> card = new ArrayList<>();
+		
+		makeCard(card, "heart");
+		makeCard(card, "diamond");
+		makeCard(card, "spade");
+		makeCard(card, "clover");
+
+		this.cardlist = card;
+	}
+
+	public List<String> getCardlist() {
+		return cardlist;
 	}
 
 	private static void makeCard(List<String> cardlist, String p) {
