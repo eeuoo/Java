@@ -17,7 +17,11 @@ public class Deck {
 		popCard();
 		System.out.println(playercard);
 		
-		for (int i = 0; i < playercard.size(); i++) {
+		popCard();
+		System.out.println(playercard);
+		int cardSize = playercard.size();
+		
+		for (int i = 0; i < cardSize; i++) {
 			System.out.println(playercard.remove(0));
 		}
 		
