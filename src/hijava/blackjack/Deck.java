@@ -17,10 +17,15 @@ public class Deck {
 		popCard();
 		System.out.println(playercard);
 		
+		for (int i = 0; i < playercard.size(); i++) {
+			System.out.println(playercard.remove(0));
+		}
+		
 	}
 
 	private static void popCard() {
 		playercard.add(Deck.remove(0));
+
 	}
 
 }
