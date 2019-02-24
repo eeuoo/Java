@@ -13,12 +13,12 @@ public class ClassEX {
 		Package pkg = cls.getPackage();
 		System.out.println("pkg=" + pkg);
 		
-//		for (Constructor c : cls.getConstructors())
-//			System.out.println("constructor=" + c);
-//		for (Field f : cls.getFields())
-//			System.out.println("field=" + f);
-//		for (Method m : cls.getMethods())
-//			System.out.println(m.getName());
+		for (Constructor<?> c : cls.getConstructors())
+			System.out.println("constructor=" + c);
+		for (Field f : cls.getFields())
+			System.out.println("field=" + f);
+		for (Method m : cls.getMethods())
+			System.out.println(m.getName());
 		
 		
 		Students newStu = (Students)cls.newInstance();

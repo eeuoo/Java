@@ -13,6 +13,7 @@ public class Deck {
 		
 		popCard();
 		System.out.println(playercard);
+		
 		popCard();
 		System.out.println(playercard);
 		
