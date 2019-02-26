@@ -34,7 +34,7 @@ public class Card {
 	private static void makeCard(List<String> cardlist, String p) {
 		String pattern = p;
 		
-		String[] alphabet = {"A","J","k","Q"};
+		String[] alphabet = {"A","J","K","Q"};
 		
 		for (int i = 2; i <= 10 ; i++ ) {
 			String strnum = Integer.toString(i) ;
