@@ -1,12 +1,5 @@
 package hijava.blackjack;
 
-
-public class Dealer implements Game {
-	
-	
-	
-	
-	
-	
+public class Dealer extends Game {
 
 }
