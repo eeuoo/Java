@@ -22,7 +22,7 @@ public class Blackjack implements Deck {
 		
 		int p = player.getSum();
 		int d = dealer.getSum();
-		System.out.println(p+ "d" + d);
+		
 		whoiswinner(p, d);
 
 	}
