@@ -17,8 +17,8 @@ public class Blackjack implements Deck {
 		dealer.start("딜러");
 		player.start("나");
 		
-		player.ing(player.getSum(), player.getPlayercard());
-		dealer.ing(dealer.getSum(), dealer.getPlayercard());
+		player.ing( player.getPlayercard());
+		dealer.ing( dealer.getPlayercard());
 		
 		int p = player.getSum();
 		int d = dealer.getSum();
@@ -39,6 +39,9 @@ public class Blackjack implements Deck {
 			System.out.println("Win!");
 		}else if (p < 21 && d > 21) {
 			System.out.println("Win!");
+		}else if (d==21) {
+			if (p==21) {System.out.println("Draw!");}
+			else {System.out.println("Lose!");}
 		}
 		
 	}

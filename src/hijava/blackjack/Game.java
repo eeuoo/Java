@@ -7,7 +7,7 @@ import java.util.List;
 public class Game implements Deck {
 
 	private List<String> playercard = new ArrayList<>();
-	private int cardsum = 0;
+	private int cardsum;
 
 	public List<String> getPlayercard() {
 		return this.playercard;
@@ -34,11 +34,9 @@ public class Game implements Deck {
 
 		System.out.println(who + "의 현재 카드" + this.playercard);
 
-		getSum(this.cardsum, this.playercard);
-
 	}
 
-	protected void ing(int cardsum, List<String> playercard) {
+	protected void ing(List<String> playercard) {
 
 		while (true) {
 			if (this.cardsum < 17) {
@@ -73,7 +71,7 @@ public class Game implements Deck {
 			}
 		}
 
-		this.cardsum += Integer.parseInt(num);
+		 this.cardsum = this.cardsum + Integer.parseInt(num);
 	}
 
 }

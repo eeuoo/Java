@@ -9,7 +9,7 @@ public class Player extends Game {
 
 	@Override
 	public void getSum(int cardsum, List<String> playercard) {
-
+	
 		String num = playercard.get(playercard.size() - 1);
 		num = num.substring(num.length() - 1);
 
@@ -27,15 +27,18 @@ public class Player extends Game {
 			} else if (aValue.equals("1")) {
 				num = "1";
 			}
-
-			cardsum += Integer.parseInt(num);
 		}
+
+		cardsum += Integer.parseInt(num);
+		
+		this.setSum(cardsum);
+	
 	}
 
 	@Override
-	public void ing(int cardsum, List<String> playercard) {
+	public void ing(List<String> playercard) {
 
-		while (cardsum <= 21) {
+		while (this.getSum() <= 21) {
 			// TODO 잘못 입력받았을 때 처리
 			System.out.println("Hit or Stand ? hit → 1, Stand → 2");
 			Scanner scanner = new Scanner(System.in);
@@ -44,17 +47,15 @@ public class Player extends Game {
 			if (inputMsg.equals("1")) {
 				super.popCard();
 				System.out.println(playercard);
-				getSum(cardsum, playercard);
+				getSum(this.getSum(), playercard);
 
 			} else if (inputMsg.equals("2")) {
-//				System.out.println("플레이어 카드 : " + playercard);
-//				System.out.println("플레이어 최종 합계=" + cardsum);
 				break;
 			}
 
 		}
-		System.out.println("플레이어 카드 : " + playercard);
-		System.out.println("플레이어 최종 합계=" + cardsum);
+		System.out.println("플레이어 카드 : " + this.getPlayercard());
+		System.out.println("플레이어 최종 합계=" + this.getSum());
 
 	}
 
