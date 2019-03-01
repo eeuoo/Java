@@ -8,7 +8,7 @@ public class Blackjack implements Deck {
 	
 
 	public static void main(String[] args) {
-//		List<String> Deck = card.getCardlist();
+
 		Collections.shuffle(Deck);
 		
 		Dealer dealer = new Dealer();

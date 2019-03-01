@@ -9,7 +9,7 @@ public class Player extends Game {
 
 	@Override
 	public void getSum(int cardsum, List<String> playercard) {
-	
+
 		String num = playercard.get(playercard.size() - 1);
 		num = num.substring(num.length() - 1);
 
@@ -17,7 +17,7 @@ public class Player extends Game {
 			num = "10";
 		} else if (num.equals("A")) {
 			System.out.println(playercard);
-			System.out.println("a value ? 11 → 1, 1 → 1");
+			System.out.println("A value ? 11 → 1, 1 → 1");
 			Scanner scan = new Scanner(System.in);
 			String aValue = scan.nextLine();
 
@@ -30,9 +30,9 @@ public class Player extends Game {
 		}
 
 		cardsum += Integer.parseInt(num);
-		
+
 		this.setSum(cardsum);
-	
+
 	}
 
 	@Override

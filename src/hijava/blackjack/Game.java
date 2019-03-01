@@ -71,7 +71,7 @@ public class Game implements Deck {
 			}
 		}
 
-		 this.cardsum = this.cardsum + Integer.parseInt(num);
+		this.cardsum = this.cardsum + Integer.parseInt(num);
 	}
 
 }
