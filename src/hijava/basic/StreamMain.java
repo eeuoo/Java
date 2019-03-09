@@ -35,7 +35,7 @@ public class StreamMain {
 		students.add(new Students(100, "Hong100"));
 		students.add(new Students(20, "Hong20"));
 		students.add(new Students(5, "Hong5"));
-		//sssss
+		
 		students.stream().map(s -> s.getName()).forEach(n -> System.out.println("stream = " + n));
 
 		System.out.println("stuIdSum = " + students.stream().mapToInt(s -> s.getId()).sum());
