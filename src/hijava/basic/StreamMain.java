@@ -9,9 +9,30 @@ public class StreamMain {
 
 	public static void main(String[] args) {
 
-		test1();
-		test2();
+//		test1();
+//		test2();
+		tryThis();
 
+	}
+
+	private static void tryThis() {
+		List<Students> students = new ArrayList<>();
+		students.add(new Students(90, "홍길동"));
+		students.add(new Students(80, "김일수"));
+		students.add(new Students(75, "김이수"));
+		students.add(new Students(95, "김삼수"));
+		
+		students.forEach(s -> System.out.println("s =" + s.getName()));
+		
+		Students[] arr = new Students[students.size()];
+		students.toArray(arr);
+		
+		int sum = Arrays.stream(arr).mapToInt(s -> s.getId()).sum();
+		double avg = Arrays.stream(arr).mapToInt(s -> s.getId()).average().getAsDouble();
+		System.out.println("sum = " + sum + ", avg = " + avg );
+		
+		Arrays.stream(arr).filter(s -> s.getId() >= 90).sorted().forEach(s -> System.out.println(s));
+		
 	}
 
 	private static void test2() {
