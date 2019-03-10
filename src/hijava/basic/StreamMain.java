@@ -21,18 +21,18 @@ public class StreamMain {
 		students.add(new Students(80, "김일수"));
 		students.add(new Students(75, "김이수"));
 		students.add(new Students(95, "김삼수"));
-		
+
 		students.forEach(s -> System.out.println("s =" + s.getName()));
-		
+
 		Students[] arr = new Students[students.size()];
 		students.toArray(arr);
-		
+
 		int sum = Arrays.stream(arr).mapToInt(s -> s.getId()).sum();
 		double avg = Arrays.stream(arr).mapToInt(s -> s.getId()).average().getAsDouble();
-		System.out.println("sum = " + sum + ", avg = " + avg );
-		
+		System.out.println("sum = " + sum + ", avg = " + avg);
+
 		Arrays.stream(arr).filter(s -> s.getId() >= 90).sorted().forEach(s -> System.out.println(s));
-		
+
 	}
 
 	private static void test2() {
@@ -56,7 +56,7 @@ public class StreamMain {
 		students.add(new Students(100, "Hong100"));
 		students.add(new Students(20, "Hong20"));
 		students.add(new Students(5, "Hong5"));
-		
+
 		students.stream().map(s -> s.getName()).forEach(n -> System.out.println("stream = " + n));
 
 		System.out.println("stuIdSum = " + students.stream().mapToInt(s -> s.getId()).sum());
