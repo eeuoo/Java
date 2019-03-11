@@ -11,8 +11,14 @@ public class StreamMain {
 
 //		test1();
 //		test2();
-		tryThis();
+//		tryThis();
+		test3();
 
+	}
+
+	private static void test3() {
+
+		
 	}
 
 	private static void tryThis() {
