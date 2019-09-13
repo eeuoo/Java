@@ -30,19 +30,35 @@ public class section_009 {
 //		avg = (float)hap / a.length;
 //		System.out.printf("%4d, %4.2f", hap, avg);
 		
-		String str = "Information!";
-		int n = str.length();
-		char[] st = new char [n];
-		n--;
-		for(int k = n; k >= 0; k--) {
-			st[n-k] = str.charAt(k);
-		}
-		for(char k : st) {
-			System.out.printf("%c", k);
-		}
+//		String str = "Information!";
+//		int n = str.length();
+//		char[] st = new char [n];
+//		n--;
+//		for(int k = n; k >= 0; k--) {
+//			st[n-k] = str.charAt(k);
+//		}
+//		for(char k : st) {
+//			System.out.printf("%c", k);
+//		}
+		
+		Employee myJik = new Employee();
+		myJik.name = "홍길동";
+		myJik.idNum = 17001;
+		myJik.salary = 4500000;
+		myJik.sex = true;
+		System.out.printf("%s\n", myJik.name);
+		System.out.printf("%d\n", myJik.idNum);
+		System.out.printf("%d\n", myJik.salary);
+		System.out.printf("%b\n", myJik.sex);
 				
 	}
 	
 	
-	
+}
+
+class Employee {
+	String name;
+	int idNum;
+	int salary;
+	boolean sex;
 }
