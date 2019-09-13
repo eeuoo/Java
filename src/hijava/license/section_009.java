@@ -12,6 +12,11 @@ public class section_009 {
 //			
 //	}
 	
+	static class AAclass {
+		int i;
+		int j;
+	}
+	
 	public static void main(String[] args) {
 //		int a[] = new int[5];
 //		int i;
@@ -41,16 +46,30 @@ public class section_009 {
 //			System.out.printf("%c", k);
 //		}
 		
-		Employee myJik = new Employee();
-		myJik.name = "홍길동";
-		myJik.idNum = 17001;
-		myJik.salary = 4500000;
-		myJik.sex = true;
-		System.out.printf("%s\n", myJik.name);
-		System.out.printf("%d\n", myJik.idNum);
-		System.out.printf("%d\n", myJik.salary);
-		System.out.printf("%b\n", myJik.sex);
+//		Employee myJik = new Employee();
+//		myJik.name = "홍길동";
+//		myJik.idNum = 17001;
+//		myJik.salary = 4500000;
+//		myJik.sex = true;
+//		System.out.printf("%s\n", myJik.name);
+//		System.out.printf("%d\n", myJik.idNum);
+//		System.out.printf("%d\n", myJik.salary);
+//		System.out.printf("%b\n", myJik.sex);
+		
+		AAclass myVal = new AAclass();
+		myVal.i = 10;
+		myVal.j = 20;
+		myVal = change(myVal);
+		System.out.printf("i=%d, j=%d\n", myVal.i, myVal.j);
 				
+	}
+	
+	static AAclass change(AAclass myVal) {
+		int temp;
+		temp = myVal.i;
+		myVal.i = myVal.j;
+		myVal.j = temp;
+		return myVal;
 	}
 	
 	
